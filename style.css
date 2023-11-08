@@ -1,4 +1,4 @@
-@media only screen and (min-width: 320px) and (max-width:768px) {
+@media only screen and (min-width: 320px) and (max-width:639px) {
 
 
     header {
@@ -7,10 +7,7 @@
         align-items: center;
         justify-content: center;
         min-height: 35vh;
-
-
-
-
+        
     }
 
     main {
@@ -46,6 +43,7 @@
 img{
     height: 30rem;
     width: 15rem;
+    object-fit: contain;
    
 }
 
