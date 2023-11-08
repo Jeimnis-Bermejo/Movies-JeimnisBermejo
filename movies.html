@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>MovieStack</title>
+    <link rel="shortcut icon" href="./img/3661087.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+ 
+</head>
+
+<body>
+    <header class="bg-violet-950  flex justify-between items-center px-10 h-20 ">
+        <div class="flex items-center ">
+            <img class="h-10" src="./img/video.png" alt="icono">
+            <h1 class="text-white text-5xl font-sans">MovieStack</h1>
+        </div>
+        <nav class="items-center mr-px ">
+            <a class="text-black text-xl bg-white p-3 rounded-2xl hover:bg-black hover:text-white"
+                href="./index.html">HOME</a>
+            <a class="text-black text-xl bg-white p-3 rounded-2xl hover:bg-black hover:text-white"
+                href="./movies.html">MOVIES</a>
+            <a class="text-black text-xl bg-white p-3 rounded-2xl hover:bg-black hover:text-white" href="FAVS">FAVS</a>
+        </nav>
+    </header>
+    <main class=" bg-black flex flex-col items-center  ">
+        <h1 class="text-white text-5xl ">MOVIES</h1>
+        <div class="flex  flex-wrap justify-center gap-5 " id="contenedor"></div>
+    </main>
+    <footer class="  bg-violet-950 text-2xl  text-blue-50 ">
+        <h2 class=" text-center  ">
+            MindHub - Cohort 52-Jeimnis Bermejo
+        </h2>
+    </footer>
+    <script src="data.js"></script>
+    <script src="movies.js"></script>
+</body>
+
+</html>
