@@ -10,7 +10,7 @@ const select = document.getElementById("select")
 const generosrepetidos = movies.map(movie => movie.genres).flat();
 
 const generosset = new Set(generosrepetidos)
-console.log(generosset)
+
 
 generosset.forEach(generosset => {
   const option = document.createElement("option");

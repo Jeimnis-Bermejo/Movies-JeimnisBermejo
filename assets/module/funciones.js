@@ -4,7 +4,7 @@ export function card(peli) {
   <h2 class= " text-white justify-items-start text-center p-1 font-bold  ">${peli.title}</h2> 
   <h3 class=" text-white text-left justify-items-start p-2 ">${peli.tagline}</h3>
   <p class=" text-white text-left justify-items-start">${peli.overview}</p>
-  <a class="text-black self-center  w-16 m-3 text-center bg-white border  border-white rounded "href=details.html?id=${peli.id}">Detalle</a>
+  <a class="text-black self-center  w-16 m-3 text-center bg-white border  border-white rounded" href="details.html?id=${peli.id}">Detalle</a>
   </article>`
   }
 
@@ -28,7 +28,8 @@ export   function filtrarpornombre(movies, title) {
     const filtro = movies.filter(movies => movies.title.toLowerCase().startsWith(title.toLowerCase()))
     return filtro
   }
-export   function tabledetails() {
+export   function tabledetails(movie) {
+  console.log("Holaa")
     return `<article class="flex justify-around items-center" >
     <div >
         <table>
