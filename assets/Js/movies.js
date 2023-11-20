@@ -1,8 +1,32 @@
 import{card, mostrarCard,filtrarporgenero,filtrarpornombre}from "./../module/funciones.js"
 
-const mostrarcard = document.getElementById("contenedor")
+const contenedormovies = document.getElementById("contenedor")
 
-mostrarCard(movies, mostrarcard, card)
+const url="https://moviestack.onrender.com/api/movies"
+const apiKei="0ff70d54-dc0b-4262-9c3d-776cb0f34dbd"
+const opciones={
+  headers:{
+    "x-api-key":apiKei
+  }
+}
+let movies =[];
+
+fetch (url,opciones)
+.then(res=> res.json())
+
+.then(data=>{
+  let movies = data.movies
+  
+  mostrarCard(movies,contenedor, card)
+ 
+  filtrarporgenero(movies,select.value)
+  filtrarpornombre(filtrarporgenero,busqueda.value)
+})
+
+.catch(error=>console.log(error))
+
+
+
 
 const busqueda = document.getElementById("busqueda")
 const select = document.getElementById("select")
@@ -22,7 +46,7 @@ generosset.forEach(generosset => {
 select.addEventListener('change', () => {
   const filtradoporgenero = filtrarporgenero(movies,select.value)
   const filtradopornombre=filtrarpornombre( filtradoporgenero , busqueda.value)
-  mostrarCard(filtradopornombre, mostrarcard, card)
+  mostrarCard(filtradopornombre, contenedormovies, card)
  
  })
  
@@ -30,7 +54,7 @@ select.addEventListener('change', () => {
 busqueda.addEventListener("input", () => {
   const filtradoporgenero = filtrarporgenero(movies,select.value)
   const filtradopornombre=filtrarpornombre( filtradoporgenero , busqueda.value)
-  mostrarCard(filtradopornombre, mostrarcard, card)
+  mostrarCard(filtradopornombre, contenedormovies, card)
 })
 
 

@@ -22,26 +22,20 @@
                 href="./../index.html">HOME</a>
             <a class="text-black text-xl bg-white p-3 rounded-2xl hover:bg-black hover:text-white"
                 href="./movies.html">MOVIES</a>
-                <a class="text-black text-xl bg-white p-3 rounded-2xl hover:bg-black hover:text-white" href="./favs.html">FAVS</a>
+            <a class="text-black text-xl bg-white p-3 rounded-2xl hover:bg-black hover:text-white" href="./favs.html">FAVS</a>
 
-            
         </nav>
-
+    </header>
     </header>
     <main class=" bg-black flex flex-col items-center min-h-screen ">
         <h1 class="text-white text-5xl ">MOVIES</h1>
         <div class="flex gap-96  m-4">
-            <div>
-                <h2 class="text-white text-center" >Buscar Pelicula</h2>
-                <input id="busqueda" type="text">
-            </div>
-            <div>
-                <select id="select"></select>
-           
-            </div>
 
+            <div id="contenedorMovies"
+                class="md:flex md:w-full md:flex-wrap md:justify-center lg:grid lg:grid-cols-4 lg:gap-4 p-4">
+
+            </div>
         </div>
-        <div class="flex  flex-wrap justify-center gap-5 " id="contenedor"></div>
     </main>
     <footer class="  bg-violet-950 text-2xl  text-blue-50 ">
         <h2 class=" text-center  ">
@@ -50,7 +44,7 @@
     </footer>
     <script type="module" src="./../Js/tailwind.config.js"></script>
     <script type="module" src="./../Js/movies.js"></script>
-    
+
 </body>
 
 </html>
